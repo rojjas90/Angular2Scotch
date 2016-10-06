@@ -1,0 +1,8 @@
+johnpapa/lite-server
+https://github.com/johnpapa/lite-server
+
+Browser sync
+https://www.browsersync.io/
+
+themes bootstrap
+https://bootswatch.com/
