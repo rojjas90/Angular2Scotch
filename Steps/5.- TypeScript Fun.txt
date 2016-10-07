@@ -1,0 +1,39 @@
+Here's some cool things TypeScript can do for us:
+
+
+// typescript
+class Greeter {}
+
+// javascript
+var Greeter = (function() {
+    function Greeter() {}
+    return Greeter;
+}());
+
+// ==================================
+
+// es6
+const message = 'hello';
+
+// javascript
+var message = 'hello';
+
+// =================================
+
+// typescript
+function saySomething(message = 'default message') {}
+
+// javascript
+function saySomething(message) {
+  if (message === void 0) { message = 'default message'; }
+}
+
+// =================================
+
+// es6
+const username = 'chris';
+const message = `Say hello to ${chris}`;
+
+// javascript
+var username = 'chris';
+var message = "Say hello to " + chris;

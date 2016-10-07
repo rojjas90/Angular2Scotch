@@ -1,0 +1,4 @@
+https://school.scotch.io/getting-started-with-angular-2/angular-dependencies
+Note: The Angular dependency versions change as new versions are updated. See below for the most current versions.
+
+> npm install core-js reflect-metadata zone.js rxjs@5.0.0-beta.12 systemjs --save
