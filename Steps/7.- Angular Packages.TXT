@@ -1,0 +1,5 @@
+Angular Packages
+https://school.scotch.io/getting-started-with-angular-2/angular-packages
+
+BASH
+> npm install @angular/core @angular/common @angular/compiler @angular/platform-browser @angular/platform-browser-dynamic @angular/forms @angular/http @angular/router --save
