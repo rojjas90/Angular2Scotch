@@ -1,0 +1,17 @@
+Setup
+https://school.scotch.io/getting-started-with-angular-2/setup
+# create index.html
+touch index.html //linux command
+
+# create package.json with defaults
+npm init --yes
+
+> npm run lite
+
+
+TypeScript Setup
+https://school.scotch.io/getting-started-with-angular-2/typescript-setup
+
+Install both with:
+> npm install --save-dev typescript typings
+> npm install --save-dev concurrently
