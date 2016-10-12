@@ -13,19 +13,26 @@ import {Component}  from "@angular/core";
     </header>
 
     <main>
-        <div class="jumbotron">
-            <h1>Welcome to Our app!</h1>
-            <p>{{message}}</p>
-        </div>
-        <!--    <p>The user is {{user.name}} ({{user.username}}).</p> -->
-
-        <div *ngIf="users">
-            <div *ngFor="let user of users">
-                {{user.name}} ({{user.username}})
+        <div class="row">
+            <div class="col-sm-4">
+                <div *ngIf="users">
+                    <ul class="list-group users-list">
+                        <li class="list-group-item" *ngFor="let user of users">
+                            {{user.name}} ({{user.username}})
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="jumbotron">
+                    <h1>Welcome to Our app!</h1>
+                    <p>{{message}}</p>
+                </div>
             </div>
         </div>
+        <!--    <p>The user is {{user.name}} ({{user.username}}).</p> -->
     </main>
-    
+
     <footer class="text-center">Copy right &copy; 2016</footer>
   `,
     styles: [`
@@ -42,4 +49,4 @@ export class AppComponent {
         { id: 28, name: 'Mendez', username: 'Mdz' },
         { id: 29, name: 'Cadete', username: 'Cdt' }
     ];
-}
+  }
