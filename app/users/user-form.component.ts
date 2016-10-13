@@ -8,18 +8,29 @@ import {User} from "../shared/models/user";
         padding: 10px;
         background: #ECF0F1;
         border-radius: 3px;
+        margin-bottom: 30px;
       }
     `],
     template: `
-      <form>
+      <form #form="ngForm">
+
+      {{form.valid}}
+
           <div class="form-group">
-              <input type="text" class="form-control" name="name" required>
+              <input type="text" class="form-control" name="name" required
+              [(ngModel)]="newUser.name" #name="ngModel">
           </div>
           <div class="form-group">
-              <input type="text" class="form-control" name="username" required>
+              <input type="text" class="form-control" name="username" required
+              [(ngModel)]="newUser.username" #username="ngModel">
           </div>
-          <button type="submit" class="btn btn-lg btn-block btn-primary">Create user</button>
+          <button type="submit" class="btn btn-lg btn-block btn-primary"
+          [disabled]="form.invalid">
+            Create user
+          </button>
       </form>
   `
 })
-export class UserFormComponent { }
+export class UserFormComponent {
+    newUser: User = new User();
+}
