@@ -26,7 +26,7 @@ import {User} from "../shared/models/user";
               <input type="text" class="form-control" name="username" placeholder="Username" required
               [(ngModel)]="newUser.username" #username="ngModel">
 
-              <span class="help-block" *ngIf="username && username.touched">Username is required</span>
+              <span class="help-block" *ngIf="username.invalid && username.touched">Username is required</span>
           </div>
           <button type="submit" class="btn btn-lg btn-block btn-primary"
           [disabled]="form.invalid">
