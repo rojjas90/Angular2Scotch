@@ -11,22 +11,15 @@
         <div class="col-sm-4">
             <div *ngIf="users">
                 <ul class="list-group users-list">
-                    <li class="list-group-item"
-                    *ngFor="let user of users"
-                    (click)="selectUser(user)"
-                    [class.active]="user === activeUser">
+                    <li class="list-group-item" *ngFor="let user of users" (click)="selectUser(user)" [class.active]="user === activeUser">
                         {{user.name}} ({{user.username}})
                     </li>
                 </ul>
             </div>
         </div>
         <div class="col-sm-8">
-            <div class="jumbotron" *ngIf="activeUser">
-                <h2>{{activeUser.name}} <small>{{activeUser.username}}</small></h2>
 
-                <input class="form-control" [(ngModel)]="activeUser.name">
-
-            </div>
+            <user-profile [user]="activeUser"></user-profile>
 
             <div class="jumbotron" *ngIf="!activeUser">
                 <span class="glyphicon glyphicon-hand-left"></span>
