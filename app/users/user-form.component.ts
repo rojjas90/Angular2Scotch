@@ -12,7 +12,7 @@ import {User} from "../shared/models/user";
       }
     `],
     template: `
-      <form #form="ngForm">
+      <form #form="ngForm" (ngSubmit)="onSubmit()" *ngIf="active">
 
       <!-- {{form.valid}} -->
 
@@ -28,6 +28,7 @@ import {User} from "../shared/models/user";
 
               <span class="help-block" *ngIf="username.invalid && username.touched">Username is required</span>
           </div>
+
           <button type="submit" class="btn btn-lg btn-block btn-primary"
           [disabled]="form.invalid">
             Create user
@@ -37,4 +38,14 @@ import {User} from "../shared/models/user";
 })
 export class UserFormComponent {
     newUser: User = new User();
+    active: boolean = true;
+
+    onSubmit() {
+        console.log(this.newUser);
+        // console.log("are you working?");
+
+        this.newUser = new User();
+        this.active = false;
+        setTimeout(() => this.active = true, 0);
+    }
 }
